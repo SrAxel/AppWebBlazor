@@ -1,0 +1,50 @@
+﻿@page "/nuevacarrera"
+@using System.ComponentModel.DataAnnotations
+@using BlazorVsCode.Shared
+@inject HttpClient Http
+@inject NavigationManager NavigationManager
+
+
+
+@if (carrera == null)
+{
+    <p><em>Cargando...</em></p>
+}
+else
+{
+    <ComponentTitle Title="Nueva Carrera:"/>
+    <h3>@carrera.nombre</h3>
+    <EditForm Model="carrera" OnValidSubmit="GuardarCarrera" >
+        <DataAnnotationsValidator />
+        <label class="form-control mb-2" for="txtCarrera">Carrera:</label>
+        <input class="form-control mb-2" type="text" @bind="carrera.nombre"/>
+        <ValidationSummary/>
+        <button class="btn btn-primary mb-2" type="submit">Guardar</button>
+        <button class="btn btn-primary mb-2" type="button" @onclick="Volver"> Cancelar </button>
+    </EditForm>
+}
+@code {
+    public Carrera? carrera { get; set; }
+
+    protected override void OnInitialized()
+    {
+        carrera = new Carrera(); 
+    }
+
+    public class Carrera
+    {
+        public int id { get; set; }
+        [Required(ErrorMessage = "El nombre debe cargarse obligatoriamente")]
+        public string nombre { get; set; } = string.Empty;
+    }
+    private async Task GuardarCarrera()
+    {
+        var response = await Http.PostAsJsonAsync($"https://inscripcionesaxelv.azurewebsites.net/api/apicarreras/", carrera);
+        NavigationManager.NavigateTo("/carreras");
+
+    }
+    private void Volver()
+    {
+        NavigationManager.NavigateTo("/carreras");
+    }
+}﻿

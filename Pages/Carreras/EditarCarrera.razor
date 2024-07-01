@@ -1,0 +1,50 @@
+﻿@page "/editarcarrera"
+@using System.ComponentModel.DataAnnotations
+@using BlazorVsCode.Shared
+@inject HttpClient Http
+@inject NavigationManager NavigationManager
+
+
+
+@if (carrera == null)
+{
+    <p><em>Cargando...</em></p>
+}
+else
+{
+    <ComponentTitle Title="Editando Carrera:"/>
+    <h3>@carrera.nombre</h3>
+    <EditForm Model="carrera" OnValidSubmit="GuardarCarrera" >
+        <DataAnnotationsValidator />
+        <label class="form-control mb-2" for="txtCarrera">Carrera:</label>
+        <input class="form-control mb-2" type="text" @bind="carrera.nombre"/>
+        <ValidationSummary/>
+        <button class="btn btn-primary mb-2" type="submit">Guardar</button>
+    </EditForm>
+}
+@code {
+
+    [SupplyParameterFromQuery]
+    [Parameter]
+    public string? idCarrera { get; set; }
+
+    public Carrera? carrera { get; set; }
+
+    protected override async Task OnInitializedAsync()
+    {
+        carrera = await Http.GetFromJsonAsync<Carrera>("https://inscripcionesaxelv.azurewebsites.net/api/apicarreras/" + idCarrera);
+    }
+
+    public class Carrera
+    {
+        public int id { get; set; }
+        [Required(ErrorMessage = "El nombre debe cargarse obligatoriamente")]
+        public string nombre { get; set; } = string.Empty;
+    }
+    private async Task GuardarCarrera()
+    {
+        var response = await Http.PutAsJsonAsync($"https://inscripcionesaxelv.azurewebsites.net/api/apicarreras/{carrera?.id}", carrera);
+        NavigationManager.NavigateTo("/carreras");
+
+    }
+}﻿

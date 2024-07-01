@@ -26,8 +26,20 @@ build_property._RazorSourceGeneratorDebug =
 build_metadata.AdditionalFiles.TargetPath = QXBwLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Blazor/BlazorVsCode/Pages/Alumnos.razor]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWx1bW5vcy5yYXpvcg==
+[C:/Blazor/BlazorVsCode/Pages/Alumnos/EditarAlumno.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWx1bW5vc1xFZGl0YXJBbHVtbm8ucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Blazor/BlazorVsCode/Pages/Alumnos/NuevoAlumno.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWx1bW5vc1xOdWV2b0FsdW1uby5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Blazor/BlazorVsCode/Pages/Carreras/EditarCarrera.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ2FycmVyYXNcRWRpdGFyQ2FycmVyYS5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Blazor/BlazorVsCode/Pages/Carreras/NuevaCarrera.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ2FycmVyYXNcTnVldmFDYXJyZXJhLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Blazor/BlazorVsCode/Pages/Counter.razor]
@@ -53,6 +65,14 @@ build_metadata.AdditionalFiles.CssScope = b-6ecqm7bfto
 [C:/Blazor/BlazorVsCode/Layout/NavMenu.razor]
 build_metadata.AdditionalFiles.TargetPath = TGF5b3V0XE5hdk1lbnUucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = b-ixhmy9uihs
+
+[C:/Blazor/BlazorVsCode/Pages/Alumnos/Alumnos.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWx1bW5vc1xBbHVtbm9zLnJhem9y
+build_metadata.AdditionalFiles.CssScope = b-kw5l3b2qve
+
+[C:/Blazor/BlazorVsCode/Pages/Carreras/Carreras.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ2FycmVyYXNcQ2FycmVyYXMucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = b-2fa8knmr3d
 
 [C:/Blazor/BlazorVsCode/Shared/ComponentTitle.razor]
 build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXENvbXBvbmVudFRpdGxlLnJhem9y

@@ -160,6 +160,100 @@ main[b-6ecqm7bfto] {
         overflow-y: auto;
     }
 }
+/* /Pages/Alumnos/Alumnos.razor.rz.scp.css */
+
+.table[b-kw5l3b2qve] {
+width: 100%;
+border-collapse: collapse;
+margin: 20px 0;
+font-size: 18px;
+min-width: 400px;
+border-radius: 5px 5px 0 0;
+overflow: hidden;
+box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+}
+
+    .table thead tr[b-kw5l3b2qve] {
+        background-color: #23395B;
+        color: #ffffff;
+        text-align: left;
+        font-weight: bold;
+    }
+
+.table th[b-kw5l3b2qve], table td[b-kw5l3b2qve] {
+padding: 12px 15px;
+}
+
+.table tbody tr[b-kw5l3b2qve] {
+border-bottom: 1px solid #dddddd;
+}
+
+.table tbody tr:nth-of-type(even)[b-kw5l3b2qve] {
+background-color: #f3f3f3;
+}
+
+    .table tbody tr:last-of-type[b-kw5l3b2qve] {
+        border-bottom: 2px solid #23395B;
+    }
+
+.table tbody tr.active-row[b-kw5l3b2qve] {
+font-weight: bold;
+color: #009879;
+}
+
+caption[b-kw5l3b2qve] {
+caption-side: top;
+font-size: 1.5em;
+margin: 10px 0;
+color: #333;
+}
+/* /Pages/Carreras/Carreras.razor.rz.scp.css */
+.table[b-2fa8knmr3d] {
+width: 100%;
+border-collapse: collapse;
+margin: 20px 0;
+font-size: 18px;
+min-width: 400px;
+border-radius: 5px 5px 0 0;
+overflow: hidden;
+box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+}
+
+    .table thead tr[b-2fa8knmr3d] {
+        background-color: #23395B;
+        color: #ffffff;
+        text-align: left;
+        font-weight: bold;
+    }
+
+.table th[b-2fa8knmr3d], table td[b-2fa8knmr3d] {
+padding: 12px 15px;
+}
+
+.table tbody tr[b-2fa8knmr3d] {
+border-bottom: 1px solid #dddddd;
+}
+
+.table tbody tr:nth-of-type(even)[b-2fa8knmr3d] {
+background-color: #f3f3f3;
+}
+
+    .table tbody tr:last-of-type[b-2fa8knmr3d] {
+        border-bottom: 2px solid #23395B;
+    }
+
+.table tbody tr.active-row[b-2fa8knmr3d] {
+font-weight: bold;
+color: #009879;
+}
+
+caption[b-2fa8knmr3d] {
+caption-side: top;
+font-size: 1.5em;
+margin: 10px 0;
+color: #333;
+}
+
 /* /Shared/ComponentTitle.razor.rz.scp.css */
 h1[b-jaurriaoz9] {
     color: #000080;

@@ -31,4 +31,14 @@
     <None Include="Shared\ComponentTitle.razor" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Content Update="Pages\Carreras\Carreras.razor">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+    </Content>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Pages\Materias\" />
+  </ItemGroup>
+
 </Project>

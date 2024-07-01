@@ -1,0 +1,56 @@
+﻿@page "/carreras"
+@using BlazorVsCode.Shared
+@inject HttpClient Http
+
+<PageTitle>Carreras</PageTitle>
+
+
+<ComponentTitle Title="Carreras"/>
+
+@if (studies == null)
+{
+    <p><em>Cargando...</em></p>
+}
+else
+{
+    <NavLink class="nav-link" href="nuevacarrera"> Nueva Carrera </NavLink>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Nombre</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var study in studies)
+            {
+                <tr>
+                    <td>@study.id</td>
+                    <td>@study.nombre</td>
+                    <td> <NavLink class="nav-link" href=@($"editarcarrera?idCarrera={@study.id}")> Editar </NavLink> </td>
+                    <td> <NavLink class="nav-link" href=@($"editarcarrera?idCarrera={@study.id}")> Eliminar </NavLink> </td>
+
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+
+@code {
+    private Study[]? studies;
+
+
+    protected override async Task OnInitializedAsync()
+    {
+        studies = await Http.GetFromJsonAsync<Study[]>("https://inscripcionesaxelv.azurewebsites.net/api/apicarreras");
+    }
+
+    public class Study
+    {
+        public int id { get; set; }
+        public string nombre { get; set; }=string.Empty;
+
+    }
+}

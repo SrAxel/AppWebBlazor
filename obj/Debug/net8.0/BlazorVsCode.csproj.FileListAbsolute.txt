@@ -1030,3 +1030,6 @@ C:\Blazor\BlazorVsCode\obj\Debug\net8.0\compressed\uj0ks77sjm.gz
 C:\Blazor\BlazorVsCode\obj\Debug\net8.0\compressed\oprrrosz8o.gz
 C:\Blazor\BlazorVsCode\obj\Debug\net8.0\compressed\xklbjvck53.gz
 C:\Blazor\BlazorVsCode\obj\Debug\net8.0\scopedcss\Shared\ComponentTitle.razor.rz.scp.css
+C:\Blazor\BlazorVsCode\obj\Debug\net8.0\BlazorVsCode.sourcelink.json
+C:\Blazor\BlazorVsCode\obj\Debug\net8.0\scopedcss\Pages\Alumnos\Alumnos.razor.rz.scp.css
+C:\Blazor\BlazorVsCode\obj\Debug\net8.0\scopedcss\Pages\Carreras\Carreras.razor.rz.scp.css

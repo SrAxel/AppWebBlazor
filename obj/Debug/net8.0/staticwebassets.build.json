@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "9i6w2dFWRcX1fMA+oYJ/unRFoGwl0+VqU/rj+5ztsM0=",
+  "Hash": "iLyGNWmTim/YkrfIviuAEmLr9RHxjlUPop/0/c0QaY0=",
   "Source": "BlazorVsCode",
   "BasePath": "/",
   "Mode": "Root",
@@ -7805,6 +7805,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "C:\\Blazor\\BlazorVsCode\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\BlazorVsCode.bundle.scp.css"
+    },
+    {
+      "Identity": "C:\\Blazor\\BlazorVsCode\\wwwroot\\appsettings.json",
+      "SourceId": "BlazorVsCode",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Blazor\\BlazorVsCode\\wwwroot\\",
+      "BasePath": "/",
+      "RelativePath": "appsettings.json",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "WasmResource",
+      "AssetTraitValue": "settings",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\appsettings.json"
     },
     {
       "Identity": "C:\\Blazor\\BlazorVsCode\\wwwroot\\css\\app.css",

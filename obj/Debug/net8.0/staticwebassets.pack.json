@@ -13,6 +13,10 @@
       "PackagePath": "staticwebassets\\BlazorVsCode.styles.css"
     },
     {
+      "Id": "C:\\Blazor\\BlazorVsCode\\wwwroot\\appsettings.json",
+      "PackagePath": "staticwebassets\\appsettings.json"
+    },
+    {
       "Id": "C:\\Blazor\\BlazorVsCode\\wwwroot\\css\\app.css",
       "PackagePath": "staticwebassets\\css\\app.css"
     },

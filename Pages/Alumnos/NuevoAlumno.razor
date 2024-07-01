@@ -1,0 +1,59 @@
+﻿@page "/nuevoalumno"
+@using BlazorVsCode.Shared
+@using System.ComponentModel.DataAnnotations
+@inject HttpClient Http
+@inject NavigationManager NavigationManager
+
+
+
+@if (alumnos == null)
+{
+    <p><em>Cargando...</em></p>
+}
+else
+{
+    <ComponentTitle Title="Nuevo Alumno:"/>
+    <EditForm Model="alumnos" OnValidSubmit="GuardarAlumno" >
+        <DataAnnotationsValidator />
+        <label class="form-control mb-2" for="txtAlumno">Apellido y Nombre:</label>
+        <input class="form-control mb-2" type="text" @bind="alumnos.apellidoNombre" />
+        <label class="form-control mb-2" for="txtAlumno">Telefono:</label>
+        <input class="form-control mb-2" type="text" @bind="alumnos.telefono" />
+        <label class="form-control mb-2" for="txtAlumno">Direccion:</label>
+        <input class="form-control mb-2" type="text" @bind="alumnos.direccion" />
+        <label class="form-control mb-2" for="txtAlumno">Email:</label>
+        <input class="form-control mb-2" type="text" @bind="alumnos.email" />
+        <ValidationSummary/>
+        <button class="btn btn-primary mb-2" type="submit">Guardar</button>
+        <button class="btn btn-primary mb-2" type="button" @onclick="Volver"> Cancelar </button>
+    </EditForm>
+}
+@code {
+    [Parameter]
+    public Alumnos? alumnos { get; set; }
+
+    protected override void OnInitialized()
+    {
+        alumnos = new Alumnos(); 
+    }
+
+    public class Alumnos
+    {
+        public int id { get; set; }
+        [Required(ErrorMessage = "El nombre debe cargarse obligatoriamente")]
+        public string apellidoNombre { get; set; } = string.Empty;
+        public string telefono { get; set; } = string.Empty;
+        public string direccion { get; set; } = string.Empty;
+        public string email { get; set; } = string.Empty;
+    }
+    private async Task GuardarAlumno()
+    {
+        var response = await Http.PostAsJsonAsync($"https://inscripcionesaxelv.azurewebsites.net/api/apialumnos/", alumnos);
+        NavigationManager.NavigateTo("/alumnos");
+
+    }
+    private void Volver()
+    {
+        NavigationManager.NavigateTo("/alumnos");
+    }
+}﻿
