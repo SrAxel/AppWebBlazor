@@ -1,0 +1,54 @@
+﻿@page "/counter/{valorInicialParameter?}"
+@using BlazorVsCode.Shared
+@inject ILogger<Counter> logger;
+
+<PageTitle>Counter</PageTitle>
+
+<ComponentTitle Title="Counter"/>
+
+<p role="status">Current count: @currentCount</p>
+
+<button class="btn btn-primary" @onclick="IncrementCount">Click me</button>
+
+@code {
+    private int currentCount = 0;
+
+    [Parameter]
+    public string? valorInicialParameter { get; set; }
+
+    [SupplyParameterFromQuery]
+    [Parameter]
+    public string? ValorInicialPorURL { get; set; }
+
+    public override async Task SetParametersAsync(ParameterView parameters)
+    {
+        if (parameters.TryGetValue<string>(nameof(valorInicialParameter), out var value))
+        {
+            if (value is not null)
+                valorInicialParameter = value;
+        }
+        await base.SetParametersAsync(parameters);
+    }
+
+    protected override void OnParametersSet() {
+        logger.LogInformation("Se recibieron parametros");
+    }
+
+    protected override void OnInitialized(){
+
+        currentCount = valorInicialParameter != null ? int.Parse(valorInicialParameter) : 0;
+        currentCount = ValorInicialPorURL != null ? int.Parse(ValorInicialPorURL) : currentCount;
+        logger.LogInformation("Se inicializo el componente");
+
+    }
+
+    protected override void OnAfterRender(bool firstRender)
+    {
+        logger.LogInformation("Se renderizo el componente");
+    }
+
+    private void IncrementCount()
+    {
+        currentCount++;
+    }
+}
